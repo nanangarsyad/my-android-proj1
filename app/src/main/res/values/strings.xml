@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">STEApps</string>
+    <string-array name="state3">
+        <item>Ada</item>
+        <item>Tidak</item>
+        <item>Rusak</item>
+    </string-array>
+</resources>

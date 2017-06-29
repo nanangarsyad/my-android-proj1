@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.steapps.steapps.PlacardActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/_group1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="PLACARD"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/_group1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="5dp">
+
+            <TableRow
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:text="Kanan"
+                    android:layout_gravity="start|center_vertical"/>
+
+                <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                    android:id="@+id/group_choices1"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    app:paddingEnd="0dp"
+                    app:paddingStart="0dp"
+                    app:tbgFlow="false">
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="ADA"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="TIDAK"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="Rusak"/>
+
+                    <!--...-->
+
+                </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:text="Kiri"
+                    android:layout_gravity="start|center_vertical"/>
+
+                <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                    android:id="@+id/group_choices2"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    app:paddingEnd="0dp"
+                    app:paddingStart="0dp"
+                    app:tbgFlow="false">
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="ADA"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="TIDAK"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="Rusak"/>
+
+                    <!--...-->
+
+                </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:text="Depan"
+                    android:layout_gravity="start|center_vertical"/>
+
+                <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                    android:id="@+id/group_choices3"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    app:paddingEnd="0dp"
+                    app:paddingStart="0dp"
+                    app:tbgFlow="false">
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="ADA"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="TIDAK"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="Rusak"/>
+
+                    <!--...-->
+
+                </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:text="Belakang"
+                    android:layout_gravity="start|center_vertical"/>
+
+                <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                    android:id="@+id/group_choices4"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    app:paddingEnd="0dp"
+                    app:paddingStart="0dp"
+                    app:tbgFlow="false">
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="ADA"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="TIDAK"/>
+
+                    <com.nex3z.togglebuttongroup.button.LabelToggle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:paddingEnd="0dp"
+                        app:paddingStart="0dp"
+                        android:text="Rusak"/>
+
+                    <!--...-->
+
+                </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
