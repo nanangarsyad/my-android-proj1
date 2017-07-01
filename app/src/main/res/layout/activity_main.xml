@@ -55,7 +55,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:text="IDENTITY"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="onClickBtnIdentity"/>
 
             <Button
                 style="@style/Widget.AppCompat.Button.Small"
@@ -65,7 +66,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/btnIdentity"
                 android:text="Logout"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="onClickBtnLogout"/>
 
         </RelativeLayout>
 
@@ -84,7 +86,8 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_margin="1dp"
-            android:text="APD DRIVER"/>
+            android:text="APD DRIVER"
+            android:onClick="onClickBtnApdDriver"/>
 
         <Button
             android:id="@+id/btnKelengkapan"
@@ -93,7 +96,8 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_margin="1dp"
-            android:text="KELENGKAPAN KENDARAAN"/>
+            android:text="KELENGKAPAN KENDARAAN"
+            android:onClick="onClickBtnKelengkapan"/>
 
         <Button
             android:id="@+id/btnPlacard"
@@ -102,7 +106,8 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_margin="1dp"
-            android:text="PLACARD"/>
+            android:text="PLACARD"
+            android:onClick="onClickBtnPlacard"/>
 
         <Button
             android:id="@+id/btnSuratDanBerlaku"
@@ -111,7 +116,8 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_margin="1dp"
-            android:text="SURAT MASA BERLAKU"/>
+            android:text="SURAT MASA BERLAKU"
+            android:onClick="onClickBtnSuratDanBerlaku"/>
 
         <Button
             android:id="@+id/btnCodeTruck"
@@ -120,7 +126,8 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_margin="1dp"
-            android:text="CODE TRUCK"/>
+            android:text="CODE TRUCK"
+            android:onClick="onClickBtnCodeTruck"/>
 
     </LinearLayout>
 
@@ -128,13 +135,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SEND"
             android:layout_alignParentRight="true"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:onClick="onClickBtnSend"/>
     </RelativeLayout>
-
-
-
 </LinearLayout >

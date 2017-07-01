@@ -42,6 +42,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/etIDcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|fill"
@@ -58,10 +59,12 @@
             </TextView>
 
             <EditText
+                android:id="@+id/etPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|fill"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:inputType="textPassword">
             </EditText>
 
             
@@ -76,12 +79,16 @@
         android:orientation="horizontal"
         android:gravity="center">
         <Button
+            android:id="@+id/btnRegister"
+            android:onClick="onClickBtnRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Register">
         </Button>
         <Button
+            android:id="@+id/btnLogin"
+            android:onClick="onClickBtnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
