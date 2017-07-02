@@ -39,6 +39,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <EditText
+                    android:id="@+id/etIjinB3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"/>
@@ -54,6 +55,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <EditText
+                    android:id="@+id/etSIM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"/>
@@ -69,6 +71,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <EditText
+                    android:id="@+id/etKIR"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"/>
@@ -85,6 +88,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <EditText
+                    android:id="@+id/etSTNK"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"/>
@@ -101,6 +105,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <EditText
+                    android:id="@+id/etUjiEmisi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"/>
@@ -113,10 +118,11 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
                 <TextView
-                    android:text="ket. Dokter"
+                    android:text="Ket. Dokter"
                     android:layout_gravity="start|center_vertical"/>
 
                 <EditText
+                    android:id="@+id/etKetDokter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"/>
@@ -133,6 +139,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSertifikat"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -154,6 +161,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swIDCard"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -179,16 +187,18 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="Cancel"
             android:layout_marginRight="10dp"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBtnCancel"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SAVE"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:onClick="onClickBtnSave"/>
 
     </RelativeLayout>
 

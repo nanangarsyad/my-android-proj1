@@ -8,13 +8,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.steapps.steapps.db.DBServer;
+import com.steapps.steapps.db.Status;
 
 import net.rimoto.intlphoneinput.IntlPhoneInput;
 
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText etFullName;
+    private EditText etUserName;
     private EditText etIdCard;
+    private EditText etTTL;
+    private EditText etTanggalMasuk;
     private EditText etPassword1;
     private EditText etPassword2;
     private IntlPhoneInput phoneInput;
@@ -27,7 +31,10 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         etFullName = (EditText) findViewById(R.id.etFullName);
+        etUserName = (EditText) findViewById(R.id.etUserName);
         etIdCard = (EditText) findViewById(R.id.etIDCard);
+        etTTL = (EditText) findViewById(R.id.etTTL);
+        etTanggalMasuk = (EditText) findViewById(R.id.etTanggalMasuk);
         etPassword1 = (EditText) findViewById(R.id.etPassword1);
         etPassword2 = (EditText) findViewById(R.id.etPassword2);
         phoneInput = (IntlPhoneInput) findViewById(R.id.cxPhoneInput);
@@ -52,8 +59,11 @@ public class RegisterActivity extends AppCompatActivity {
             etFullName.getText().toString(),
             etIdCard.getText().toString(),
             pass1,
+            etUserName.getText().toString(),
             phoneInput.getText(),
-            etEmailAddres.getText().toString()
+            etEmailAddres.getText().toString(),
+            etTTL.getText().toString(),
+            etTanggalMasuk.getText().toString()
         );
 
         if (status.isSucces()) {

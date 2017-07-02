@@ -6,22 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.steapps.steapps.KelengkapanActivity">
 
-    <LinearLayout
-        android:id="@+id/_group1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="KELENGKAPAN KENDARAAN"/>
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
         <TableLayout
@@ -29,6 +17,19 @@
             android:layout_height="wrap_content"
             android:stretchColumns="*"
             android:padding="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="KELENGKAPAN KENDARAAN"/>
+            </TableRow>
+
 
             <TableRow
                 android:layout_marginTop="2dp"
@@ -40,6 +41,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swApar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -71,6 +73,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSpillSkop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -91,6 +94,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSpillSapuLidi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -111,6 +115,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSpillSawDust"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -130,6 +135,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swGps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -149,6 +155,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swDuskMask"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -168,6 +175,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swLampuRotary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -187,6 +195,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swRambuPortable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -206,6 +215,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swKerucutPengaman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -225,6 +235,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSegitigaPengaman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -244,6 +255,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swDongkrak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -263,6 +275,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swPitaPembatas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -282,6 +295,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swGansalRoda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -301,6 +315,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swKotakObat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -326,14 +341,16 @@
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_marginRight="10dp"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBtnCancel"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SAVE"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:onClick="onClickBtnSave"/>
 
     </RelativeLayout>
 

@@ -39,6 +39,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swHelm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -58,6 +59,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSafetyShoes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -77,6 +79,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSafetyGlasses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -96,6 +99,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swBodyVest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -115,6 +119,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swSarungTangan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -134,6 +139,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/swDuskMask"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
@@ -159,14 +165,17 @@
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_marginRight="10dp"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBtnCancel"/>
 
         <Button
+            android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SAVE"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:onClick="onClickBtnSave"/>
 
     </RelativeLayout>
 

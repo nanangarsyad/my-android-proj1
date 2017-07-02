@@ -39,7 +39,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
-                    android:id="@+id/group_choices1"
+                    android:id="@+id/tglKanan"
                     android:layout_weight="1"
                     android:layout_height="30dp"
                     app:paddingEnd="0dp"
@@ -82,7 +82,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
-                    android:id="@+id/group_choices2"
+                    android:id="@+id/tglKiri"
                     android:layout_weight="1"
                     android:layout_height="30dp"
                     app:paddingEnd="0dp"
@@ -126,7 +126,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
-                    android:id="@+id/group_choices3"
+                    android:id="@+id/tglDepan"
                     android:layout_weight="1"
                     android:layout_height="30dp"
                     app:paddingEnd="0dp"
@@ -170,7 +170,7 @@
                     android:layout_gravity="start|center_vertical"/>
 
                 <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
-                    android:id="@+id/group_choices4"
+                    android:id="@+id/tglBelakang"
                     android:layout_weight="1"
                     android:layout_height="30dp"
                     app:paddingEnd="0dp"
@@ -219,14 +219,16 @@
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_marginRight="10dp"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBtnCancel"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SAVE"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:onClick="onClickBtnSave"/>
 
     </RelativeLayout>
 

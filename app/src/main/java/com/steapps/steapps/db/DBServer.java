@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.steapps.steapps.Status;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -27,7 +25,8 @@ public class DBServer {
 
     public static Status register(
             String fullName, String idCard, String password,
-            String phoneNum, String email) {
+            String userName, String phoneNum, String email,
+            String ttl, String tglMasuk) {
 
         if (sUserDB.contains(idCard)) {
             return new Status(0, "Failed. User Already Exist");
@@ -36,6 +35,9 @@ public class DBServer {
         JSONObject jobj = new JSONObject();
         try {
             jobj.put(DBKey.USER_FULLNAME, fullName);
+            jobj.put(DBKey.USER_USERNAME, userName);
+            jobj.put(DBKey.USER_TTL, ttl);
+            jobj.put(DBKey.USER_TANGGAL_MASUK, tglMasuk);
             jobj.put(DBKey.USER_IDCARD, idCard);
             jobj.put(DBKey.USER_PASSWORD, password);
             jobj.put(DBKey.USER_PHONE, phoneNum);
@@ -55,7 +57,7 @@ public class DBServer {
             try {
                 JSONObject jsonObject = new JSONObject(sUserDB.getString(idCard, null));
                 if (jsonObject.getString(DBKey.USER_PASSWORD).equals(password)) {
-                    DBLocal.loggedInuser(jsonObject);
+                    DBLocal.User.loggedInuser(jsonObject);
                     return new Status(1, "Success. Login with idCard " + idCard);
                 } else {
                     return new Status(0, "Failed. Wrong password");
@@ -69,8 +71,8 @@ public class DBServer {
     }
 
     public static Status logout() {
-        if (DBLocal.isAlreadyLoggedIn()) {
-            DBLocal.loggedOutUser();
+        if (DBLocal.User.isAlreadyLoggedIn()) {
+            DBLocal.User.loggedOutUser();
             return new Status(1, "Success. Logged out");
         } else {
             return new Status(0, "Failed. No user logged in");

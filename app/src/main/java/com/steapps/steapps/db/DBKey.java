@@ -8,6 +8,9 @@ public class DBKey {
     public static final String USER_PASSWORD = "password";
     public static final String USER_IDCARD = "idcard";
     public static final String USER_FULLNAME = "fullname";
+    public static final String USER_USERNAME = "username";
+    public static final String USER_TTL = "ttl";
+    public static final String USER_TANGGAL_MASUK = "tanggal_masuk";
     public static final String USER_PHONE = "phone";
     public static final String USER_EMAIL = "email";
 
@@ -48,4 +51,5 @@ public class DBKey {
 
     public static final String FORM_TRUCK_CODE = "from_truck_code";
 }
+
 

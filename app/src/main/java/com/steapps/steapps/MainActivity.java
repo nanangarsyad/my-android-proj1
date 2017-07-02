@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.steapps.steapps.db.DBKey;
 import com.steapps.steapps.db.DBLocal;
 import com.steapps.steapps.db.DBServer;
+import com.steapps.steapps.db.Status;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvUserName = (TextView) findViewById(R.id.tvUserName);
+
+        tvUserName.setText(DBLocal.User.getStringValue(DBKey.USER_USERNAME));
     }
 
     public void onClickBtnLogout(View view) {
@@ -33,23 +37,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBtnIdentity(View view) {
+        startActivity(new Intent(this, IdentityActivity.class));
     }
 
     public void onClickBtnApdDriver(View view) {
+        startActivity(new Intent(this, APDDriverActivity.class));
     }
 
     public void onClickBtnKelengkapan(View view) {
+        startActivity(new Intent(this, KelengkapanActivity.class));
     }
 
     public void onClickBtnPlacard(View view) {
+        startActivity(new Intent(this, PlacardActivity.class));
     }
 
     public void onClickBtnSuratDanBerlaku(View view) {
+        startActivity(new Intent(this, SuratDanBerlakuActivity.class));
     }
 
     public void onClickBtnCodeTruck(View view) {
+        startActivity(new Intent(this, CodeTruckActivity.class));
     }
 
     public void onClickBtnSend(View view) {
+
     }
 }

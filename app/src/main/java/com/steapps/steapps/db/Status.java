@@ -1,4 +1,4 @@
-package com.steapps.steapps;
+package com.steapps.steapps.db;
 
 /**
  * Created by NAAF on 30/06/2017.

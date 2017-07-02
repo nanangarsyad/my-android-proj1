@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.steapps.steapps.db.DBLocal;
 import com.steapps.steapps.db.DBServer;
+import com.steapps.steapps.db.Status;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         DBLocal.prepare(this);
         DBServer.prepare(this);
 
-        if (DBLocal.isAlreadyLoggedIn()) {
+        if (DBLocal.User.isAlreadyLoggedIn()) {
             startMainActivity();
             return;
         }

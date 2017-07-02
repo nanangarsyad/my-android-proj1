@@ -12,64 +12,148 @@ import org.json.JSONObject;
  */
 
 public class DBLocal {
-    private static SharedPreferences sDbLocal;
+    private static SharedPreferences sDbUser;
+    private static SharedPreferences sDbForm;
     private static boolean isPrepared = false;
 
     public static void prepare(Activity activity) {
-        String prefName = "DBLocal";
         int mode = Context.MODE_PRIVATE;
-        sDbLocal = activity.getSharedPreferences(prefName, mode);
+        String userPerf = "DBLocal_User";
+        String formPerf = "DBLocal_Form";
+        sDbUser = activity.getSharedPreferences(userPerf, mode);
+        sDbForm = activity.getSharedPreferences(formPerf, mode);
         DBLocal.isPrepared = true;
     }
 
-    public static boolean isAlreadyLoggedIn() {
-        if (sDbLocal.contains(DBKey.USER_IDCARD)) {
-            return  true;
-        } else {
-            return  false;
+    public static class User {
+
+        public static boolean isAlreadyLoggedIn() {
+            if (sDbUser.contains(DBKey.USER_IDCARD)) {
+                return  true;
+            } else {
+                return  false;
+            }
+        }
+
+        static void loggedInuser(JSONObject userData) {
+            SharedPreferences.Editor editor = sDbUser.edit();
+            try {
+                editor.putString(DBKey.USER_IDCARD, userData.getString(DBKey.USER_IDCARD));
+                editor.putString(DBKey.USER_EMAIL, userData.getString(DBKey.USER_EMAIL));
+                editor.putString(DBKey.USER_FULLNAME, userData.getString(DBKey.USER_FULLNAME));
+                editor.putString(DBKey.USER_USERNAME, userData.getString(DBKey.USER_USERNAME));
+                editor.putString(DBKey.USER_TTL, userData.getString(DBKey.USER_TTL));
+                editor.putString(DBKey.USER_TANGGAL_MASUK, userData.getString(DBKey.USER_TANGGAL_MASUK));
+                editor.putString(DBKey.USER_PASSWORD, userData.getString(DBKey.USER_PASSWORD));
+                editor.putString(DBKey.USER_PHONE, userData.getString(DBKey.USER_PHONE));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            editor.apply();
+        }
+
+        static void loggedOutUser() {
+            SharedPreferences.Editor editor = sDbUser.edit();
+            editor.remove(DBKey.USER_IDCARD);
+            editor.remove(DBKey.USER_PASSWORD);
+            editor.remove(DBKey.USER_FULLNAME);
+            editor.remove(DBKey.USER_USERNAME);
+            editor.remove(DBKey.USER_TTL);
+            editor.remove(DBKey.USER_TANGGAL_MASUK);
+            editor.remove(DBKey.USER_PHONE);
+            editor.remove(DBKey.USER_EMAIL);
+            editor.apply();
+        }
+
+        public static String getStringValue(String key) {
+            return getStringValue(key, null);
+        }
+
+        public static String getStringValue(String key, String def) {
+            return sDbUser.getString(key, def);
+
+        }
+
+        public static boolean getBooleanValue(String key) {
+            return getBooleanValue(key, false);
+        }
+
+        public static boolean getBooleanValue(String key, boolean def) {
+            return sDbUser.getBoolean(key, def);
         }
     }
 
-    static void loggedInuser(JSONObject userData) {
-        SharedPreferences.Editor editor = sDbLocal.edit();
-        try {
-            editor.putString(DBKey.USER_IDCARD, userData.getString(DBKey.USER_IDCARD));
-            editor.putString(DBKey.USER_EMAIL, userData.getString(DBKey.USER_EMAIL));
-            editor.putString(DBKey.USER_FULLNAME, userData.getString(DBKey.USER_FULLNAME));
-            editor.putString(DBKey.USER_PASSWORD, userData.getString(DBKey.USER_PASSWORD));
-            editor.putString(DBKey.USER_PHONE, userData.getString(DBKey.USER_PHONE));
-        } catch (JSONException e) {
-            e.printStackTrace();
+    public static class Form {
+
+
+        public static void clearAll() {
+            sDbForm.edit().clear().apply();
         }
-        editor.apply();
+
+        public static void putValues(Object[] ... keyAndValues) {
+            SharedPreferences.Editor editor = sDbForm.edit();
+            for (Object[] pair : keyAndValues) {
+                String key = (String) pair[0];
+                Object value = pair[1];
+                if (value instanceof Integer) {
+                    editor.putInt(key, (Integer) value);
+                } else if (value instanceof  Float) {
+                    editor.putFloat(key, (Float) value);
+                } else if (value instanceof String) {
+                    editor.putString(key, (String) value);
+                } else if (value instanceof  Boolean) {
+                    editor.putBoolean(key, (Boolean) value);
+                }
+            }
+            editor.apply();
+        }
+
+        public static void putValue(String key, String value) {
+            SharedPreferences.Editor editor =  sDbForm.edit();
+            editor.putString(key, value);
+            editor.apply();
+        }
+
+        public static void putValue(String key, int value) {
+            SharedPreferences.Editor editor =  sDbForm.edit();
+            editor.putInt(key, value);
+            editor.apply();
+        }
+
+        public static void putValue(String key, boolean value) {
+            SharedPreferences.Editor editor =  sDbForm.edit();
+            editor.putBoolean(key, value);
+            editor.apply();
+        }
+
+        public static int getIntValue(String key) {
+            return getIntValue(key, 0);
+        }
+
+        public static int getIntValue(String key , int def) {
+            return sDbForm.getInt(key, def);
+        }
+
+        public static String getStringValue(String key) {
+            return getStringValue(key, null);
+        }
+
+        public static String getStringValue(String key, String def) {
+            return sDbForm.getString(key, def);
+
+        }
+
+        public static boolean getBooleanValue(String key) {
+            return getBooleanValue(key, false);
+        }
+
+        public static boolean getBooleanValue(String key, boolean def) {
+            return sDbForm.getBoolean(key, def);
+        }
+
+
     }
 
-    static void loggedOutUser() {
-        SharedPreferences.Editor editor = sDbLocal.edit();
-        editor.remove(DBKey.USER_IDCARD);
-        editor.remove(DBKey.USER_PASSWORD);
-        editor.remove(DBKey.USER_FULLNAME);
-        editor.remove(DBKey.USER_PHONE);
-        editor.remove(DBKey.USER_EMAIL);
-        editor.apply();
-    }
-
-//    public static void put(String key, String value) {
-//        SharedPreferences.Editor editor =  sDbLocal.edit();
-//        editor.putString(key, value);
-//        editor.apply();
-//    }
-//
-//    public static void put(String key, int value) {
-//        SharedPreferences.Editor editor =  sDbLocal.edit();
-//        editor.putInt(key, value);
-//        editor.apply();
-//    }
-//
-//    public static void put(String key, boolean value) {
-//        SharedPreferences.Editor editor =  sDbLocal.edit();
-//        editor.putBoolean(key, value);
-//        editor.apply();
-//    }
 
 }
+

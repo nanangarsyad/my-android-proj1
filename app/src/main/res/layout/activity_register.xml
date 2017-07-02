@@ -30,11 +30,35 @@
             </EditText>
 
             <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="User Name">
+            </EditText>
+
+            <EditText
                 android:id="@+id/etIDCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="ID Card">
+            </EditText>
+
+            <EditText
+                android:id="@+id/etTTL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Tempat Tanngal Lahir">
+            </EditText>
+
+            <EditText
+                android:id="@+id/etTanggalMasuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Tanggal Masuk Perusahaan">
             </EditText>
 
             <EditText
