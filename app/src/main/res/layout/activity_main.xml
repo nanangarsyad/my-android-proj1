@@ -134,11 +134,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Form"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:onClick="onClickBtnClear"/>
+
         <Button
             android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SEND"
+            android:text="SEND FORm"
             android:layout_alignParentRight="true"
             android:layout_margin="5dp"
             android:onClick="onClickBtnSend"/>

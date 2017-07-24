@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.steapps.steapps.db.DBKey;
 import com.steapps.steapps.db.DBLocal;
 
-public class CodeTruckActivity extends AppCompatActivity {
+public class CodeTruckActivity extends BaseActivity {
 
     private TextView tvHeader;
     private EditText etCodeTruck;

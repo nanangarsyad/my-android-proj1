@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Map;
+
 /**
  * Created by NAAF on 30/06/2017.
  */
@@ -85,6 +87,18 @@ public class DBLocal {
 
     public static class Form {
 
+        public static boolean isFormReadyToSend() {
+            for (String key: DBKey.ALL_FORM_KEYS) {
+                if (!sDbForm.contains(key)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static Map<String, ?> asMap() {
+            return sDbForm.getAll();
+        }
 
         public static void clearAll() {
             sDbForm.edit().clear().apply();

@@ -9,7 +9,7 @@ import com.nex3z.togglebuttongroup.button.LabelToggle;
 import com.steapps.steapps.db.DBKey;
 import com.steapps.steapps.db.DBLocal;
 
-public class PlacardActivity extends AppCompatActivity {
+public class PlacardActivity extends BaseActivity {
 
     private SingleSelectToggleGroup tglKanan;
     private SingleSelectToggleGroup tglKiri;

@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -34,4 +38,16 @@ dependencies {
     implementation 'net.rimoto:intlphoneinput:1.0.1'
     implementation 'com.kyleduo.switchbutton:library:1.4.6'
     implementation 'com.nex3z:toggle-button-group:1.0.1'
+    implementation 'com.google.firebase:firebase-database:11.0.2'
+    implementation 'net.steamcrafted:load-toast:1.0.10'
+    implementation 'com.github.GrenderG:Toasty:1.2.5'
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+
+//    /*https://github.com/EsotericSoftware/reflectasm/issues/23*/
+//    /*only applicale to java*/
+//    implementation 'com.esotericsoftware:reflectasm:1.11.3'
+
 }
+
+
+apply plugin: 'com.google.gms.google-services'

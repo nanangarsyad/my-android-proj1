@@ -9,7 +9,7 @@ import com.kyleduo.switchbutton.SwitchButton;
 import com.steapps.steapps.db.DBKey;
 import com.steapps.steapps.db.DBLocal;
 
-public class APDDriverActivity extends AppCompatActivity {
+public class APDDriverActivity extends BaseActivity {
 
     private SwitchButton swHelm;
     private SwitchButton swSafetyShoes;

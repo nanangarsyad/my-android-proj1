@@ -11,7 +11,9 @@ import com.steapps.steapps.db.DBLocal;
 import com.steapps.steapps.db.DBServer;
 import com.steapps.steapps.db.Status;
 
-public class LoginActivity extends AppCompatActivity {
+import es.dmoral.toasty.Toasty;
+
+public class LoginActivity extends BaseActivity {
 
     private EditText etIDcard;
     private EditText etPasword;
@@ -45,11 +47,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickBtnLogin(View view) {
-        Status status = DBServer.login(etIDcard.getText().toString(),etPasword.getText().toString());
-        if (status.isSucces()) {
-            startMainActivity();
-        } else {
-            Toast.makeText(this, status.message, Toast.LENGTH_LONG).show();
-        }
+        DBServer.login(
+                etIDcard.getText().toString(),
+                etPasword.getText().toString(),
+                status -> {
+                    if (status.isSucces()) {
+                        startMainActivity();
+                    } else {
+                        Toasty.error(this, status.message, Toast.LENGTH_LONG).show();
+                }});
+
     }
 }

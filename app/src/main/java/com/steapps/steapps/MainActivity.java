@@ -12,7 +12,9 @@ import com.steapps.steapps.db.DBLocal;
 import com.steapps.steapps.db.DBServer;
 import com.steapps.steapps.db.Status;
 
-public class MainActivity extends AppCompatActivity {
+import es.dmoral.toasty.Toasty;
+
+public class MainActivity extends BaseActivity {
 
     private TextView tvUserName;
 
@@ -61,6 +63,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBtnSend(View view) {
+        DBServer.sendFormToServer(status -> {
+            if (status.isSucces()) {
+                Toasty.success(this, status.message, Toast.LENGTH_LONG).show();
+            } else {
+                Toasty.error(this, status.message, Toast.LENGTH_LONG).show();
+            }
 
+        });
+    }
+
+    public void onClickBtnClear(View view) {
+        DBLocal.Form.clearAll();
+        String msg = "Success. Form cleared.";
+        Toasty.success(this, msg , Toast.LENGTH_LONG).show();
     }
 }

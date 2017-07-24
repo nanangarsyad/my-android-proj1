@@ -17,4 +17,9 @@ public class Status {
         return code == 1;
     }
 
+     public interface Callback {
+
+        void onDone(Status status);
+    }
+
 }

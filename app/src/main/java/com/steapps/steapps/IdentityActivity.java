@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.steapps.steapps.db.DBKey;
 import com.steapps.steapps.db.DBLocal;
 
-public class IdentityActivity extends AppCompatActivity {
+public class IdentityActivity extends BaseActivity {
 
     private TextView tvNamaLengkap;
     private TextView tvUserName;

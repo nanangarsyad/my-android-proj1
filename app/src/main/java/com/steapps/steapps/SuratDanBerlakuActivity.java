@@ -9,7 +9,7 @@ import com.kyleduo.switchbutton.SwitchButton;
 import com.steapps.steapps.db.DBKey;
 import com.steapps.steapps.db.DBLocal;
 
-public class SuratDanBerlakuActivity extends AppCompatActivity {
+public class SuratDanBerlakuActivity extends BaseActivity {
 
     private EditText etIjinB3;
     private EditText etSIM;

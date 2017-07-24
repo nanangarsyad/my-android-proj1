@@ -8,7 +8,7 @@ import com.kyleduo.switchbutton.SwitchButton;
 import com.steapps.steapps.db.DBKey;
 import com.steapps.steapps.db.DBLocal;
 
-public class KelengkapanActivity extends AppCompatActivity {
+public class KelengkapanActivity extends BaseActivity {
 
     private SwitchButton swApar;
     private SwitchButton swSpillSkop;

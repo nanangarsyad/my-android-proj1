@@ -12,7 +12,7 @@ import com.steapps.steapps.db.Status;
 
 import net.rimoto.intlphoneinput.IntlPhoneInput;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseActivity {
 
     private EditText etFullName;
     private EditText etUserName;
@@ -55,7 +55,17 @@ public class RegisterActivity extends AppCompatActivity {
             etPassword2.setText(null);
             return;
         }
-        Status status = DBServer.register(
+
+        Status.Callback callback = (status) -> {
+            if (status.isSucces()) {
+                Toast.makeText(this, status.message, Toast.LENGTH_SHORT).show();
+                finish();
+            } else {
+                Toast.makeText(this, status.message, Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        DBServer.register(
             etFullName.getText().toString(),
             etIdCard.getText().toString(),
             pass1,
@@ -63,14 +73,10 @@ public class RegisterActivity extends AppCompatActivity {
             phoneInput.getText(),
             etEmailAddres.getText().toString(),
             etTTL.getText().toString(),
-            etTanggalMasuk.getText().toString()
+            etTanggalMasuk.getText().toString(),
+            callback
         );
 
-        if (status.isSucces()) {
-            Toast.makeText(this, status.message, Toast.LENGTH_SHORT).show();
-            finish();
-        } else {
-            Toast.makeText(this, status.message, Toast.LENGTH_SHORT).show();
-        }
+
     }
 }

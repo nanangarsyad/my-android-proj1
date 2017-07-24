@@ -5,6 +5,9 @@ package com.steapps.steapps.db;
  */
 
 public class DBKey {
+
+
+
     public static final String USER_PASSWORD = "password";
     public static final String USER_IDCARD = "idcard";
     public static final String USER_FULLNAME = "fullname";
@@ -50,6 +53,43 @@ public class DBKey {
     public static final String FORM_SRT_BERLAKU_IDCARD = "form_placard_idcard";
 
     public static final String FORM_TRUCK_CODE = "from_truck_code";
+
+    /*package*/ static final String[] ALL_FORM_KEYS = {
+            FORM_APD_HELM,
+            FORM_APD_SAFETY_SHOES,
+            FORM_APD_SAFETY_GLASSES,
+            FORM_APD_BODY_VEST,
+            FORM_APD_SARUNG_TANGAN,
+            FORM_APD_DUSK_MASK,
+
+            FORM_KELENGKAPAN_APAR,
+            FORM_KELENGKAPAN_SPILL_SKOP,
+            FORM_KELENGKAPAN_SPILL_SAPU_LIDI,
+            FORM_KELENGKAPAN_SPILL_SAW_DUST,
+            FORM_KELENGKAPAN_GPS,
+            FORM_KELENGKAPAN_LAMPU_ROTARY,
+            FORM_KELENGKAPAN_RAMBU_PORTABLE,
+            FORM_KELENGKAPAN_KERUCUT_ PENGAMAN,
+            FORM_KELENGKAPAN_SEGITIGA_PENGAMAN,
+            FORM_KELENGKAPAN_DONGKRAK,
+            FORM_KELENGKAPAN_PITA_PEMBATAS,
+            FORM_KELENGKAPAN_GANSAL_RODA,
+            FORM_KELENGKAPAN_KOTAK_OBAT,
+
+            FORM_PLACARD_KANAN,
+            FORM_PLACARD_KIRI,
+            FORM_PLACARD_DEPAN,
+            FORM_PLACARD_BELAKANG,
+
+            FORM_SRT_BERLAKU_IJIN_B3,
+            FORM_SRT_BERLAKU_SIM,
+            FORM_SRT_BERLAKU_KIR,
+            FORM_SRT_BERLAKU_STNK,
+            FORM_SRT_BERLAKU_UJI_EMISI,
+            FORM_SRT_BERLAKU_KET_DOKTER,
+            FORM_SRT_BERLAKU_SERTIFIKAT,
+            FORM_SRT_BERLAKU_IDCARD
+    };
 }
 
 
