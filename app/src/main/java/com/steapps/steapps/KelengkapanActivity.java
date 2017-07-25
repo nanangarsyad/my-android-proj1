@@ -1,6 +1,5 @@
 package com.steapps.steapps;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -55,7 +54,7 @@ public class KelengkapanActivity extends BaseActivity {
         swSegitigaPengaman.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_SEGITIGA_PENGAMAN));
         swDongkrak.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_DONGKRAK));
         swPitaPembatas.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_PITA_PEMBATAS));
-        swGansalRoda.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_GANSAL_RODA));
+        swGansalRoda.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_GANJAL_RODA));
         swKotakObat.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_KOTAK_OBAT));
     }
 
@@ -76,7 +75,7 @@ public class KelengkapanActivity extends BaseActivity {
                 new Object[]{DBKey.FORM_KELENGKAPAN_SEGITIGA_PENGAMAN,  swSegitigaPengaman.isChecked()},
                 new Object[]{DBKey.FORM_KELENGKAPAN_DONGKRAK,           swDongkrak.isChecked()},
                 new Object[]{DBKey.FORM_KELENGKAPAN_PITA_PEMBATAS,      swPitaPembatas.isChecked()},
-                new Object[]{DBKey.FORM_KELENGKAPAN_GANSAL_RODA,        swGansalRoda.isChecked()},
+                new Object[]{DBKey.FORM_KELENGKAPAN_GANJAL_RODA,        swGansalRoda.isChecked()},
                 new Object[]{DBKey.FORM_KELENGKAPAN_KOTAK_OBAT,         swKotakObat.isChecked()}
         );
         finish();
