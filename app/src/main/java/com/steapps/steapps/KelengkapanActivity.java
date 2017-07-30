@@ -20,8 +20,10 @@ public class KelengkapanActivity extends BaseActivity {
     private SwitchButton swSegitigaPengaman;
     private SwitchButton swDongkrak;
     private SwitchButton swPitaPembatas;
-    private SwitchButton swGansalRoda;
+    private SwitchButton swGanjalRoda;
     private SwitchButton swKotakObat;
+
+
 
 
     @Override
@@ -40,7 +42,7 @@ public class KelengkapanActivity extends BaseActivity {
         swSegitigaPengaman = (SwitchButton) findViewById(R.id.swSegitigaPengaman);
         swDongkrak = (SwitchButton) findViewById(R.id.swDongkrak);
         swPitaPembatas = (SwitchButton) findViewById(R.id.swPitaPembatas);
-        swGansalRoda = (SwitchButton) findViewById(R.id.swGansalRoda);
+        swGanjalRoda = (SwitchButton) findViewById(R.id.swGanjalRoda);
         swKotakObat = (SwitchButton) findViewById(R.id.swKotakObat);
 
         swApar.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_APAR));
@@ -54,7 +56,7 @@ public class KelengkapanActivity extends BaseActivity {
         swSegitigaPengaman.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_SEGITIGA_PENGAMAN));
         swDongkrak.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_DONGKRAK));
         swPitaPembatas.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_PITA_PEMBATAS));
-        swGansalRoda.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_GANJAL_RODA));
+        swGanjalRoda.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_GANJAL_RODA));
         swKotakObat.setCheckedImmediately(DBLocal.Form.getBooleanValue(DBKey.FORM_KELENGKAPAN_KOTAK_OBAT));
     }
 
@@ -75,7 +77,7 @@ public class KelengkapanActivity extends BaseActivity {
                 new Object[]{DBKey.FORM_KELENGKAPAN_SEGITIGA_PENGAMAN,  swSegitigaPengaman.isChecked()},
                 new Object[]{DBKey.FORM_KELENGKAPAN_DONGKRAK,           swDongkrak.isChecked()},
                 new Object[]{DBKey.FORM_KELENGKAPAN_PITA_PEMBATAS,      swPitaPembatas.isChecked()},
-                new Object[]{DBKey.FORM_KELENGKAPAN_GANJAL_RODA,        swGansalRoda.isChecked()},
+                new Object[]{DBKey.FORM_KELENGKAPAN_GANJAL_RODA,        swGanjalRoda.isChecked()},
                 new Object[]{DBKey.FORM_KELENGKAPAN_KOTAK_OBAT,         swKotakObat.isChecked()}
         );
         finish();
