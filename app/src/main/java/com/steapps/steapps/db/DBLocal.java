@@ -88,10 +88,14 @@ public class DBLocal {
     public static class Form {
 
         public static boolean isFormReadyToSend() {
+            Map<String, Object> asMap = (Map<String, Object>) sDbForm.getAll();
             for (String key: DBKey.ALL_FORM_KEYS) {
                 if (!sDbForm.contains(key)) {
                     return false;
+                } else if (asMap.get(key) == null)  {
+                    return false;
                 }
+
             }
             return true;
         }
