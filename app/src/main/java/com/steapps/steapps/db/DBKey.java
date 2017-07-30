@@ -88,7 +88,9 @@ public class DBKey {
             FORM_SRT_BERLAKU_UJI_EMISI,
             FORM_SRT_BERLAKU_KET_DOKTER,
             FORM_SRT_BERLAKU_SERTIFIKAT,
-            FORM_SRT_BERLAKU_IDCARD
+            FORM_SRT_BERLAKU_IDCARD,
+            
+            FORM_TRUCK_CODE
     };
 }
 
