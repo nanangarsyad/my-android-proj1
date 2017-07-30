@@ -26,12 +26,6 @@ public abstract  class BaseActivity extends CActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-        Colorful.defaults()
-                .primaryColor(Colorful.ThemeColor.INDIGO)
-                .accentColor(Colorful.ThemeColor.LIGHT_BLUE)
-                .translucent(false)
-                .dark(true);
-        Colorful.init(this);
     }
 
 
