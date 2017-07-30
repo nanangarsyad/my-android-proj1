@@ -192,6 +192,7 @@ public class DBServer {
     public static Status logout() {
         if (DBLocal.User.isAlreadyLoggedIn()) {
             DBLocal.User.loggedOutUser();
+            DBLocal.Form.clearAll();
             return new Status(1, "Success. Logged out");
         } else {
             return new Status(0, "Failed. No user logged in");

@@ -17,6 +17,7 @@ import es.dmoral.toasty.Toasty;
 public class MainActivity extends BaseActivity {
 
     private TextView tvUserName;
+    private boolean isSendingData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +64,14 @@ public class MainActivity extends BaseActivity {
     }
 
     public void onClickBtnSend(View view) {
+        if (isSendingData) {
+            Toasty.success(this, "Sending. Please wait...",
+                            Toast.LENGTH_LONG).show();
+            return;
+        }
+        isSendingData = true;
         DBServer.sendFormToServer(status -> {
+            isSendingData = false;
             if (status.isSucces()) {
                 Toasty.success(this, status.message, Toast.LENGTH_LONG).show();
             } else {
