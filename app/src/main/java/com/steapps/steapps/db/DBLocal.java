@@ -92,7 +92,8 @@ public class DBLocal {
             for (String key: DBKey.ALL_FORM_KEYS) {
                 if (!sDbForm.contains(key)) {
                     return false;
-                } else if (asMap.get(key) == null)  {
+                } else if (asMap.get(key) instanceof  String &&
+                            asMap.get(key).equals(""))  {
                     return false;
                 }
 
